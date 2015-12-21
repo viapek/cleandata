@@ -102,9 +102,10 @@ if (!'./train' %in% list.dirs()) {
     cat('.')
     # apply the column names
     names(trainData) <- columnNames
-    cat('.\n')
+    cat('.')
     # clear variables to save memory
     rm(list=ls()[grep('Train',ls())])
+    cat('.\n')
     
     
     #####################################################################
