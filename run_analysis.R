@@ -130,8 +130,8 @@ if (!'./train' %in% list.dirs()) {
     columnNames <- names(completeData)
     cat('.')
     # clean up the column names and reassign using regex and a diminishing scope
-    columnNames <- gsub('[0-9]*\\s[a-z]([^-]*)\\S*(mean|std)\\S*-([XYZ]?)', '\\1 \\2 \\3', columnNames)
-    columnNames <- gsub('[0-9]*\\s[a-z]([^-]*)\\S*(mean|std)\\S*', '\\1 \\2', columnNames)
+    columnNames <- gsub('[0-9]*\\s([a-z][^-]*)\\S*(mean|std)\\S*-([XYZ]?)', '\\1 \\2 \\3', columnNames)
+    columnNames <- gsub('[0-9]*\\s([a-z][^-]*)\\S*(mean|std)\\S*', '\\1 \\2', columnNames)
     cat('.')
     # put the new column names back into the names space
     names(completeData) <- columnNames
