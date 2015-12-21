@@ -29,6 +29,7 @@ if (!'./train' %in% list.dirs()) {
     # load the data table library #
     ###############################
     library(data.table)
+    library(dplyr)
     
     ####################################################################
     # open the features file and extract the column and activity names #
